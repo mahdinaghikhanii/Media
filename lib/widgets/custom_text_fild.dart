@@ -119,7 +119,7 @@ class CustomTextFieldState extends State<CustomTextField> {
               borderSide: BorderSide(
                   style:
                       widget.showBorder ? BorderStyle.solid : BorderStyle.none,
-                  width: 1,
+                  width: 2,
                   color: Theme.of(context).primaryColor),
             ),
             border: OutlineInputBorder(
