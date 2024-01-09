@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'dart:convert';
 import 'dart:io';
 
@@ -8,7 +10,6 @@ import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:mime/mime.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
@@ -211,7 +212,54 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.arrow_back, color: Colors.white)),
+          centerTitle: false,
+          backgroundColor: const Color(0xFF1F1C38),
+          elevation: 4,
+          foregroundColor: Colors.black,
+          surfaceTintColor: Colors.black,
+          titleSpacing: 0,
+          title: Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(left: 5, right: 10),
+                width: 45,
+                height: 45,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    image: const DecorationImage(
+                        image: AssetImage(
+                          'assets/flutter.jpg',
+                        ),
+                        fit: BoxFit.cover)),
+              ),
+              const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Flutter Developers",
+                      style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(height: 1),
+                    Text(
+                      "8324 members, 521 online",
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500),
+                    )
+                  ])
+            ],
+          ),
+        ),
         body: Chat(
+          theme: const DarkChatTheme(),
           messages: _messages,
           onAttachmentPressed: _handleAttachmentPressed,
           onMessageTap: _handleMessageTap,

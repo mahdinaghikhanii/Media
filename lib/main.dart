@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
+          shadowColor: Colors.red,
           primaryColor: Colors.grey,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+          applyElevationOverlayColor: true,
           useMaterial3: true,
         ),
         home: ChatPage());
