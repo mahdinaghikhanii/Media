@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:media/views/auth/login.dart';
+
+import 'package:media/views/home/home.dart';
 import 'helper/get_di.dart' as di;
 
 Future<void> main() async {
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
           useMaterial3: true,
         ),
-        home: LoginView());
+        home: HomeScreen());
   }
 }
