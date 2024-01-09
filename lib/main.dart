@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:media/views/home/home.dart';
 import 'helper/get_di.dart' as di;
+import 'views/chat/chat.dart';
 
 Future<void> main() async {
   await di.init();
@@ -22,6 +22,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
           useMaterial3: true,
         ),
-        home: HomeScreen());
+        home: ChatPage());
   }
 }

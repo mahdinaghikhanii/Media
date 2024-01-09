@@ -22,6 +22,14 @@ dependencies:
   gradient_borders: ^0.2.0
   simple_gradient_text: ^1.2.4
   flutter_svg: ^1.1.6
+  flutter_chat_ui: ^1.6.10
+  open_filex: ^4.3.4
+  image_picker: ^1.0.7
+  path_provider: ^2.1.2
+  uuid: ^4.2.0
+  file_picker: ^6.1.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -37,6 +45,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/icon/
+    - assets/img/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
